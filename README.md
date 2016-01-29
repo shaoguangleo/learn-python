@@ -3,6 +3,6 @@
 
 
 #更多信息
-Hi，XDJM们，更多信息欢迎移步微信公众号letsProgramming.
+Hi，XDJM们，更多信息欢迎移步[我的github](https://github.com/shaoguangleo)或微信公众号letsProgramming.
 
 ![letsProgramming](http://img.blog.csdn.net/20160128231400788)
