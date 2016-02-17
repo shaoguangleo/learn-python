@@ -1,6 +1,53 @@
 # 我们编程吧 之 python 学习手册
 **Version 0.2**
 
+# Python技巧
+
+## Python 缩写惯例
+
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+```
+
+# Python IDE
+
+
+## Python（x，y）
+
+GUI基于PyQt，曾经是功能最全也是最强大的，而且是Windows系统中科学免费Python发行版的不二选择.不过PythonXY里面的许多包为了兼容性的问题，无法使用最新的程序包。
+
+对于科学计算要有的基本都有了：numpy，sicpy，matplotlib，spyder... 现在的版本是2.7.6.0。从安装到使用,时不时玩"崩溃"! 版本的稳定性远不如2.7.3.1。
+
+## WinPython
+
+WinPython功能也是比较全的,软件包比较新，GUI基于PyQt，不过相对于Python（x，y），它主要是关注便携式安装体验：你可以把它装在u盘里面。
+
+
+## Enthought Python Distribution (EPD)
+
+Enthought canopy是专门的Python集成编译环境，[参考Enthought](https://www.enthought.com/ "参考Enthought")。 GUI基于wxpython,包含PySide,但不包括PyQt.WxPython使用起来是比较方便，但是远没有PyQt和PySide流行，需要使用PyQt的可以自己安装。Canopy有自己的集成开发环境（IDE），里面的代码智能提示和自动补全功能不比IPython差的！Canopy中还集成了Pyhton包的在线升级和管理系统，很是方便。由于是商业级别的，Canopy的性能和稳定性超强!也提供免费的free版本和学术版本（用于教育科研也是免费的）。以前叫EPD，现在改名叫Canopy。Canopy是第一个将Ipython升级到1.1.0的发行版；MatPlotLib已升级到1.3.1；NumPy 1.8.0；Scipy 1.2.0. 但是它主要是追求性能和稳定性，所以不能指望所有的安装包都是最新的，例如对于MinGW,Canopy是4.8.1，其它版本的发行版可都是4.7呀!basemap官方的也已换成1.0.7了,这对于那些还在被迫使用Grads和NCL的用户而言是个福音!如果你有学校邮箱的话，可以在Enthought的网站注册一下，选择学术+full的发行版本，会让你的工作如虎添翼的。
+
+## Anaconda
+
+Anaconda是一个和Canopy类似的科学计算环境。自带的包管理器conda很强大。GUI基于PySide，所有的包基本上都是最新版，没有PyQt和wxpython等，容量适中，但该有的科学计算包都有：numpy，sicpy，matplotlib，spyder.....。
+
+Linux系统里面,Anaconda安装、更新和删除都很方便,且所有的东西都只安装在一个目录中/home/username/anaconda/,这点比下面的Canopy要好得多。Anaconda目前提供Python 2.6.9,Python 2.7.X和Python 3.3.X三个系列发行包，这也是其他发行版所望尘莫及的。因此在各种操作系统中，无论是Linux，还是Windows，又或是Mac，都强烈推荐Anaconda！
+
+在Anaconda中升级和安装都很方便,只是不像winPython那样提供图形环境,而是使用命令行:
+
+## Eclipse + PyDev
+
+## Python Tools for Visual Studio （仅限Windows用户）
+
+## PyCharm
+
+正在使用，神器。
+
+## Spyder
+
+## Komodo IDE
 
 
 # Python库
@@ -54,6 +101,11 @@ SciPy是一款方便、易于使用、专为科学和工程设计的Python工具
  - 信号和图像处理
  - 常微分方程求解器等等
 
+## colorama
+
+既然你为日志设置了很好的进度条，何不让它们变得多彩起来！而且还可以当事情出现严重错误的时候还可以提醒自己。
+
+colorama超级易于使用。只要弹出到你的脚本，添加任何你想要变色的文本即可
 
 # 更多信息
 Hi，XDJM们，更多信息欢迎移步[我的github](https://github.com/shaoguangleo)或微信公众号letsProgramming.
