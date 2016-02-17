@@ -151,8 +151,40 @@ pbar.finish()
 
 # IPython
 
+## <Tab>键自动补全
+
+使用IPython最大的好处莫过于代码的自动补全了，万万记得经常使用。
+
+![tab-complete](http://img.blog.csdn.net/20160217170148418)
 
 
+## Introspection功能
+
+对于任何一个变量，比如data，在它的前面或者后面加上问好？，即**?data或者data?**就可以将关于该变量的一些通用信息显示出来。
+
+![Introspection](http://img.blog.csdn.net/20160217170320795)
+
+## %run命令
+
+使用
+```python
+%run python_file.py
+```
+可以在IPython环境中运行脚本，并且脚本中的变量可以在IPython中直接访问。
+
+如果希望脚本能够访问在交互式IPython命名空间中定义的变量，那就使用**%run -i python_file.py**。
+
+## 键盘快捷键
+
+比较有用的就这几个，熟悉吧。
+
+![shortcut](http://img.blog.csdn.net/20160217171445532)
+
+## 统计花费时间
+
+可以使用魔术命令%timeit 跟上语句来统计语句的执行时间。比如我们统计创建一个无序的含有100000个items的字典，看到大概需要花费20.2ms的时间。
+
+![timeit](http://img.blog.csdn.net/20160217173006929)
 
 # 更多信息
 Hi，XDJM们，更多信息欢迎移步[我的github](https://github.com/shaoguangleo)或微信公众号letsProgramming.
