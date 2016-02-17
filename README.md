@@ -24,6 +24,10 @@ Pandas中的数据结构
  - DataFrame：二维的表格型数据结构。很多功能与R中的data.frame类似。可以将DataFrame理解为Series的容器。以下的内容主要以DataFrame为主。
  - Panel ：三维的数组，可以理解为DataFrame的容器。
 
+## matplotlib
+
+[matplotlib](www.matplotlib.org/ "matplotlib")是最流行的用于绘制数据图表的Python库。非常适合创建出版物上用的图表。跟IPython结合的很好，提供了一种非常好用的交互式数据绘图环境，绘制的图表也是交互式的，你可以利用绘图窗口中的工具栏放大图表中的某个区域或对整个图表进行平移浏览。
+
 
 # 更多信息
 Hi，XDJM们，更多信息欢迎移步[我的github](https://github.com/shaoguangleo)或微信公众号letsProgramming.
