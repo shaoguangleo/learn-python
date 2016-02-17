@@ -1,6 +1,8 @@
 # 我们编程吧 之 python 学习手册
 **Version 0.2**
 
+
+
 # Python库
 
 ## Numpy
@@ -27,6 +29,30 @@ Pandas中的数据结构
 ## matplotlib
 
 [matplotlib](www.matplotlib.org/ "matplotlib")是最流行的用于绘制数据图表的Python库。非常适合创建出版物上用的图表。跟IPython结合的很好，提供了一种非常好用的交互式数据绘图环境，绘制的图表也是交互式的，你可以利用绘图窗口中的工具栏放大图表中的某个区域或对整个图表进行平移浏览。
+
+## ipython
+
+ipython 是Python科学计算标准工具集的组成部分，是一个 python 的交互式 shell，比默认的python shell 好用得多，支持变量自动补全，自动缩进，支持 bash shell 命令，内置了许多很有用的功能和函数。
+
+除了标准的基于终端的IPython shell外，该项目还提供了：
+
+ - 一个类似Mathematica的HTML笔记本
+ - 一个基于Qt框架的GUI控制台
+ - 用于交互式并行和分布式计算的基础架构
+
+## SciPy
+
+SciPy是一款方便、易于使用、专为科学和工程设计的Python工具包。
+
+它包括
+
+ - 统计
+ - 优化
+ - 整合
+ - 线性代数模块
+ - 傅里叶变换
+ - 信号和图像处理
+ - 常微分方程求解器等等
 
 
 # 更多信息
