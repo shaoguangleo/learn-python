@@ -151,6 +151,7 @@ pbar.finish()
 
 # IPython
 
+
 ## <Tab>键自动补全
 
 使用IPython最大的好处莫过于代码的自动补全了，万万记得经常使用。
@@ -240,6 +241,39 @@ IPython中比较重要的一个特点是，可以执行系统的shell命令，�
 ## 调试
 
 **TBC**
+
+## IPython HTML Notebook
+
+NB是一种基于Web技术的交互式计算文档格式，是一种非常棒的交互式计算工具，还是科研和教学的一种理想媒介。
+
+NB有一种基于JSON的文档格式.ipynb，使得我们可以轻松地分享代码、输出结果以及图片等。
+
+IPython Notebook 既是一个交互计算平台，又是一个记录计算过程的「笔记本」。它由服务端和客户端两部分组成，其中服务端负责代码的解释与计算，而客户端负责与用户进行交互。服务端可以运行在本机也可以运行在远程服务器，包含负责运算的 IPython kernel (与 QT Console 的 kernel 相同) 以及一个 HTTP/S 服务器 (Tornado)。而客户端则是一个指向服务端地址的浏览器页面，负责接受用户的输入并负责渲染输出。
+
+这个页面几乎涵括了 QT Console 具有的全部交互式功能，如代码高亮，自动补全，实时帮助，内嵌显示绘图结果等；其次，计算过程及结果可以方便地保存为多种格式，如默认的 JSON 格式，Python 脚本以及 PDF 等；此外，借助 Markdown 及 MathJax，用户可以在计算过程中插入详尽细致的描述，甚至以描述为主，计算为辅，从而将它当作科技类文章写作的工具。
+
+正是由于 IPython Notebook 的灵活易用，方便传播等特点，它现已被用于可重复数据分析，课程教学，博客写作等众多领域。
+
+### 每次运行按shift-enter
+
+每次按下**shift-enter**就会执行代码。
+
+![shift-enter](http://img.blog.csdn.net/20160218134908135)
+
+### 内嵌的魔术命令
+
+```
+%matplotlib inline
+```
+在Notebook中输入上述命令，就可以将matplotlib内嵌到Notebook内，如下图：
+
+![inline](http://img.blog.csdn.net/20160218135257098)
+
+### 可以直接运行shell命令
+
+![ls](http://img.blog.csdn.net/20160218135434615)
+
+
 
 # 更多信息
 Hi，XDJM们，更多信息欢迎移步[我的github](https://github.com/shaoguangleo)或微信公众号letsProgramming.
