@@ -1,5 +1,5 @@
 # 我们编程吧 之 python 学习手册
-**Version 0.2**
+**Version 0.3**
 
 [TOC]
 
@@ -179,6 +179,27 @@ pbar.finish()
 比较有用的就这几个，熟悉吧。
 
 ![shortcut](http://img.blog.csdn.net/20160217171445532)
+
+## 魔术命令
+
+IPython有一些特殊的命令，成为魔术命令Magic Command，他们能为常见的任务提供便利，魔术命令以%开始。
+
+比如：
+
+魔术命令 | 说明
+---------|------
+%quickref | 显示IPython的快速参考
+%magic | 显示所有魔术命令的说明
+%debug | 从最新的异常跟踪底部进入交互式调试器
+%hist | 打印命令的输入历史
+%pdb | 在异常发生后自动进入调试器
+%paste | 执行剪贴板中的python代码
+%reset | 删除interactive命名空间中的全部变量及名称
+%run script.py | 在IPython中执行一个Python脚本文件
+%timeit stetement | 多次执行statement以计算系统平均执行时间
+%who %who_ls %whos | 显示interactive命名空间中定义的变量、信息级别和冗余度
+%xdel variable | 删除variable，并尝试清除其在IPython中的对象上的一切引用
+
 
 ## 统计花费时间
 
