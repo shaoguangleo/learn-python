@@ -1,5 +1,5 @@
 # 我们编程吧 之 python 学习手册
-**Version 0.3**
+**Version 0.4**
 
 [TOC]
 
@@ -274,8 +274,80 @@ IPython Notebook 既是一个交互计算平台，又是一个记录计算过程
 ![ls](http://img.blog.csdn.net/20160218135434615)
 
 
+# NumPy
+
+NumPy（**Numerical Python**）系统是Python的一种开源的数值计算扩展。这种工具可用来存储和处理大型矩阵，比Python自身的嵌套列表（nested list structure)结构要高效的多。据说NumPy将Python相当于变成一种 **免费的更强大的** MatLab系统。
+
+部分功能如下所示：
+
+ - 一个强大的N维数组对象Array
+ - 比较成熟的（广播）函数库
+ - 用于整合C/C++和Fortran代码的工具包
+ - 实用的线性代数、傅里叶变换和随机数生成函数等
+
+## ndarray - 一种多维数组对象
+
+ndarray是一个通用的同构数据多维容器，其中的所有元素都是相同类型的，每个数组都有一个**shape**（表示各个维度大小的元组）和一个**dtype**（用于说明数组数据类型的对象）。
+
+![ndarray](http://img.blog.csdn.net/20160218151559934)
+
+
+## 创建ndarray
+
+创建数组很简单，使用array函数即可，它接受一切序列型的对象（包括其他数组），然后产生一个新的含有传入数据的NumPy数组，比如将一个列表转换为数组的方法为：
+
+![array](http://img.blog.csdn.net/20160218164112098)
+
+除了array函数之外，也可以使用下面的函数来新建数组：
+
+- zeros
+- ones
+- empty
+
+![morearrayfuncs](http://img.blog.csdn.net/20160218164349861)
+
+这里需要注意的是，empty并不是返回零，而是一些未初始化的垃圾值。
+
+也要注意range和arange的区别。
+
+![arange](http://img.blog.csdn.net/20160218164528517)
+
+## ndarray的数据类型及转换
+
+Python的数据类型大致分为：**浮点数、复数、整数、布尔值、字符串**等。
+
+类型 | 代码 | 说明
+-----|-----|----
+int8,uint8 | i1,u1| 有符号和无符号的8位（1个字节）整型
+int16,uint16 |i2,u2| 有符号和无符号的16位（2个字节）整型
+int32,uint32|i4,u4| 有符号和无符号的32位（4个字节）整型
+int64,uint64|i8,u8| 有符号和无符号的64位（8个字节）整型
+float16| f2 | 半精度浮点数
+float32| f4或f | 标准的单精度浮点数，与C的float兼容
+float64| f8或d | 标准的双精度浮点苏，与C的double和Python的float兼容
+float128| f16或g| 扩展精度浮点数
+complex64,complex128,complex256 | c8,c16,c32| 分备用两个32位，64位或128位浮点数表示的复数
+bool | ? | 存储True和False值的布尔类型
+
+类型的转换十分常见，比如使用**astype**函数
+
+![astype](http://img.blog.csdn.net/20160218165538678)
+
+
+
+
+
+
+
+
+
+
+更多信息参考[numpy官网][numpy]。
 
 # 更多信息
 Hi，XDJM们，更多信息欢迎移步[我的github](https://github.com/shaoguangleo)或微信公众号letsProgramming.
 
 ![letsProgramming](http://img.blog.csdn.net/20160128231400788)
+
+
+[numpy]: http://www.numpy.org 
