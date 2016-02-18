@@ -185,7 +185,6 @@ pbar.finish()
 IPython有一些特殊的命令，成为魔术命令Magic Command，他们能为常见的任务提供便利，魔术命令以%开始。
 
 比如：
-
 魔术命令 | 说明
 ---------|------
 %quickref | 显示IPython的快速参考
@@ -199,6 +198,22 @@ IPython有一些特殊的命令，成为魔术命令Magic Command，他们能为
 %timeit stetement | 多次执行statement以计算系统平均执行时间
 %who %who_ls %whos | 显示interactive命名空间中定义的变量、信息级别和冗余度
 %xdel variable | 删除variable，并尝试清除其在IPython中的对象上的一切引用
+
+## 基于Qt的GUI控制台
+
+如果你已经安装了PyQt或者PySide，那么可以使用IPython团队开发的一个基于Qt框架的GUI控制台，
+
+```
+jupyter qtconsole
+```
+
+该控制台如下所示：
+
+![jupyter](http://img.blog.csdn.net/20160218112401796)
+
+
+
+
 
 
 ## 统计花费时间
