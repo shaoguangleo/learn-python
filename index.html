@@ -1,34 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <title>Learn-python by shaoguangleo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <title>Learn-python by shaoguangleo</title>
   </head>
-
   <body>
-    <header>
-      <div class="inner">
-        <h1>Learn-python</h1>
-        <h2>Teach you how to learn python</h2>
-        <a href="https://github.com/shaoguangleo/learn-python" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
+    <section class="page-header">
+      <h1 class="project-name">Learn-python</h1>
+      <h2 class="project-tagline">Teach you how to learn python</h2>
+      <a href="https://github.com/shaoguangleo/learn-python" class="btn">View on GitHub</a>
+      <a href="https://github.com/shaoguangleo/learn-python/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/shaoguangleo/learn-python/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
+    <section class="main-content">
+      <h1>
 <a id="我们编程吧-之-python-学习手册" class="anchor" href="#%E6%88%91%E4%BB%AC%E7%BC%96%E7%A8%8B%E5%90%A7-%E4%B9%8B-python-%E5%AD%A6%E4%B9%A0%E6%89%8B%E5%86%8C" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>我们编程吧 之 python 学习手册</h1>
 
 <p><strong>Version 0.3</strong></p>
@@ -299,30 +290,55 @@ pbar.finish()
 
 <p><strong>TBC</strong></p>
 
+<h2>
+<a id="ipython-html-notebook" class="anchor" href="#ipython-html-notebook" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>IPython HTML Notebook</h2>
+
+<p>NB是一种基于Web技术的交互式计算文档格式，是一种非常棒的交互式计算工具，还是科研和教学的一种理想媒介。</p>
+
+<p>NB有一种基于JSON的文档格式.ipynb，使得我们可以轻松地分享代码、输出结果以及图片等。</p>
+
+<p>IPython Notebook 既是一个交互计算平台，又是一个记录计算过程的「笔记本」。它由服务端和客户端两部分组成，其中服务端负责代码的解释与计算，而客户端负责与用户进行交互。服务端可以运行在本机也可以运行在远程服务器，包含负责运算的 IPython kernel (与 QT Console 的 kernel 相同) 以及一个 HTTP/S 服务器 (Tornado)。而客户端则是一个指向服务端地址的浏览器页面，负责接受用户的输入并负责渲染输出。</p>
+
+<p>这个页面几乎涵括了 QT Console 具有的全部交互式功能，如代码高亮，自动补全，实时帮助，内嵌显示绘图结果等；其次，计算过程及结果可以方便地保存为多种格式，如默认的 JSON 格式，Python 脚本以及 PDF 等；此外，借助 Markdown 及 MathJax，用户可以在计算过程中插入详尽细致的描述，甚至以描述为主，计算为辅，从而将它当作科技类文章写作的工具。</p>
+
+<p>正是由于 IPython Notebook 的灵活易用，方便传播等特点，它现已被用于可重复数据分析，课程教学，博客写作等众多领域。</p>
+
+<h3>
+<a id="每次运行按shift-enter" class="anchor" href="#%E6%AF%8F%E6%AC%A1%E8%BF%90%E8%A1%8C%E6%8C%89shift-enter" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>每次运行按shift-enter</h3>
+
+<p>每次按下<strong>shift-enter</strong>就会执行代码。</p>
+
+<p><img src="http://img.blog.csdn.net/20160218134908135" alt="shift-enter"></p>
+
+<h3>
+<a id="内嵌的魔术命令" class="anchor" href="#%E5%86%85%E5%B5%8C%E7%9A%84%E9%AD%94%E6%9C%AF%E5%91%BD%E4%BB%A4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>内嵌的魔术命令</h3>
+
+<pre><code>%matplotlib inline
+</code></pre>
+
+<p>在Notebook中输入上述命令，就可以将matplotlib内嵌到Notebook内，如下图：</p>
+
+<p><img src="http://img.blog.csdn.net/20160218135257098" alt="inline"></p>
+
+<h3>
+<a id="可以直接运行shell命令" class="anchor" href="#%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E8%BF%90%E8%A1%8Cshell%E5%91%BD%E4%BB%A4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>可以直接运行shell命令</h3>
+
+<p><img src="http://img.blog.csdn.net/20160218135434615" alt="ls"></p>
+
 <h1>
 <a id="更多信息" class="anchor" href="#%E6%9B%B4%E5%A4%9A%E4%BF%A1%E6%81%AF" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>更多信息</h1>
 
 <p>Hi，XDJM们，更多信息欢迎移步<a href="https://github.com/shaoguangleo">我的github</a>或微信公众号letsProgramming.</p>
 
 <p><img src="http://img.blog.csdn.net/20160128231400788" alt="letsProgramming"></p>
-        </section>
 
-        <aside id="sidebar">
-          <a href="https://github.com/shaoguangleo/learn-python/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/shaoguangleo/learn-python/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/shaoguangleo/learn-python">Learn-python</a> is maintained by <a href="https://github.com/shaoguangleo">shaoguangleo</a>.</span>
 
-          <p class="repo-owner"><a href="https://github.com/shaoguangleo/learn-python"></a> is maintained by <a href="https://github.com/shaoguangleo">shaoguangleo</a>.</p>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
 
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
-    </div>
+    </section>
 
   
   </body>
