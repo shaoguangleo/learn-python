@@ -204,7 +204,7 @@ IPython有一些特殊的命令，成为魔术命令Magic Command，他们能为
 如果你已经安装了PyQt或者PySide，那么可以使用IPython团队开发的一个基于Qt框架的GUI控制台，
 
 ```
-jupyter qtconsole
+$ jupyter qtconsole
 ```
 
 该控制台如下所示：
@@ -212,15 +212,34 @@ jupyter qtconsole
 ![jupyter](http://img.blog.csdn.net/20160218112401796)
 
 
+## matplotlib集成与pylab模式
 
+如果在标准的IPython shell中创建一个matplotlib绘图窗口，你会发现只有当你关闭绘图窗口后才能继续与shell交互，也就是说GUI的事件会占用Python会话的控制权，这就导致无法实现交互式的数据分析和可视化，因此IPython对各个GUI框架进行了专门的处理以使得能够与IPython配合地天衣无缝。
 
+```sh
+$ ipython --pylab
+```
 
+关于pylab选项的含义是：**使用默认的matplotlib后端，并载入matplotlib和numpy来更好地交互。**
+
+## shell命令
+
+IPython中比较重要的一个特点是，可以执行系统的shell命令，只需要在前面加上一个！即可，如下所示：
+
+![shell](http://img.blog.csdn.net/20160218121518662)
 
 ## 统计花费时间
 
 可以使用魔术命令%timeit 跟上语句来统计语句的执行时间。比如我们统计创建一个无序的含有100000个items的字典，看到大概需要花费20.2ms的时间。
 
 ![timeit](http://img.blog.csdn.net/20160217173006929)
+
+
+
+
+## 调试
+
+**TBC**
 
 # 更多信息
 Hi，XDJM们，更多信息欢迎移步[我的github](https://github.com/shaoguangleo)或微信公众号letsProgramming.
