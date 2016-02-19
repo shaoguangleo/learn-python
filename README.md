@@ -1,5 +1,5 @@
 # 我们编程吧 之 python 学习手册
-**Version 0.4**
+**Version 0.5**
 
 [TOC]
 
@@ -343,6 +343,14 @@ bool | ? | 存储True和False值的布尔类型
 
 
 更多信息参考[numpy官网][numpy]。
+
+# matplotlib
+
+TBC
+
+# pandas
+
+TBC
 
 # 更多信息
 Hi，XDJM们，更多信息欢迎移步[我的github](https://github.com/shaoguangleo)或微信公众号letsProgramming.
