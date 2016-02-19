@@ -344,7 +344,19 @@ bool | ? | 存储True和False值的布尔类型
 
 更多信息参考[numpy官网][numpy]。
 
+# SciPy
+
+TBC
+
 # matplotlib
+
+TBC
+
+# Chaco
+
+TBC
+
+#mayavi
 
 TBC
 
