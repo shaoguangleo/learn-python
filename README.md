@@ -351,6 +351,7 @@ TBC
 # matplotlib
 
 TBC
+Adding more demos~
 
 # Chaco
 
@@ -370,4 +371,4 @@ Hi，XDJM们，更多信息欢迎移步[我的github](https://github.com/shaogua
 ![letsProgramming](http://img.blog.csdn.net/20160128231400788)
 
 
-[numpy]: http://www.numpy.org 
+[numpy]: http://www.numpy.org
