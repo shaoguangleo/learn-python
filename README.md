@@ -1,5 +1,5 @@
 # 我们编程吧 之 python 学习手册
-**Version 0.5**
+**Version 0.6**
 
 [TOC]
 
@@ -350,8 +350,107 @@ TBC
 
 # matplotlib
 
-TBC
-Adding more demos~
+matplotlib 是python最著名的绘图库，它提供了一整套和matlab相似的命令API，十分适合**交互式**地行制图。而且也可以方便地将它作为绘图控件，**嵌入GUI应用程序**中。
+
+matplotlib实际上是一套面向对象的绘图库，它所绘制的图表中的每个绘图元素，例如线条Line2D、文字Text、刻度等在内存中都有一个对象与之对应。
+
+为了方便快速绘图matplotlib通过pyplot模块提供了一套和MATLAB类似的绘图API，将众多绘图对象所构成的复杂结构隐藏在这套API内部。我们只需要调用pyplot模块所提供的函数就可以实现快速绘图以及设置图表的各种细节。
+
+为了将面向对象的绘图库包装成只使用函数的调用接口，pyplot模块的内部保存了当前图表以及当前子图等信息。当前的图表和子图可以使用plt.gcf()和plt.gca()获得，分别表示"Get Current Figure"和"Get Current Axes"。
+
+本章是用的所有程序都需要导入下述惯例：
+
+```python
+import matplotlib.pyplot as plt
+```
+
+## 绘制多子图
+
+可以使用subplot()快速绘制包含多个子图的图表，它的调用形式如下：
+
+```
+subplot(numRows, numCols, plotNum)
+```
+
+subplot将整个绘图区域等分为**numRows**行* **numCols**列个子区域，然后按照从左到右，从上到下的顺序对每个子区域进行编号，左上的子区域的编号为1。如果numRows，numCols和plotNum这三个数都小于10的话，可以把它们缩写为一个整数，例如subplot(323)和subplot(3,2,3)是相同的。subplot在plotNum指定的区域中创建一个轴对象。如果新创建的轴和之前创建的轴重叠的话，之前的轴将被删除。
+
+```python
+import matplotlib.pyplot as plt
+
+for idx, color in enumerate('rgbyck'):
+    plt.subplot(321+idx,axisbg=color)
+
+plt.show()
+```
+
+效果如下所示：
+
+![subplot](http://img.blog.csdn.net/20160221183257219)
+
+
+## 绘制多图表
+
+如果需要同时绘制多幅图表，可以给figure()传递一个整数参数指定Figure对象的序号，如果序号所指定的Figure对象已经存在，将不创建新的对象，而只是让它成为当前的Figure对象。
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+plt.figure(1)
+plt.figure(2)
+
+ax1 = plt.subplot(211)
+ax2 = plt.subplot(212)
+
+x = np.linspace(0, 3, 100)
+
+for i in range(5):
+    plt.figure(1)
+    plt.plot(x, np.exp(i*x/3))
+    plt.sca(ax1)
+    plt.plot(x, np.sin(i*x))
+    plt.sca(ax2)
+    plt.plot(x, np.cos(i*x))
+
+plt.show()
+```
+
+效果如下所示：
+
+![plot1](http://img.blog.csdn.net/20160221192450827)
+
+![plot2](http://img.blog.csdn.net/20160221192514844)
+
+## 面向对象画图
+
+matplotlib API包含有三层，Artist层处理所有的高层结构，例如处理图表、文字和曲线等的绘制和布局。通常我们只和Artist打交道，而不需要关心底层的绘制细节。
+
+直接使用Artists创建图表的标准流程如下：
+ - 创建Figure对象
+ - 用Figure对象创建一个或者多个Axes或者Subplot对象
+ - 调用Axies等对象的方法创建各种简单类型的Artists
+
+```python
+import matplotlib.pyplot as plt
+
+x1 = range(0, 50)
+y1 = [num**2 for num in x1]
+
+x2 = [0, 1, 2, 3]
+y2 = [0, 2, 1, 5]
+
+fig = plt.figure(figsize=(8, 4))
+ax = fig.add_subplot(211)
+ax.plot(x1, y1)
+ax = fig.add_subplot(212)
+ax.plot(x2, y2)
+plt.show()
+fig.savefig('artists.pdf')
+```
+
+![artist](http://img.blog.csdn.net/20160221193834168)
+
+
 
 # Chaco
 
