@@ -1,5 +1,5 @@
 # 我们编程吧 之 python 学习手册
-**Version 0.6**
+**Version 0.7**
 
 [TOC]
 
@@ -463,6 +463,73 @@ TBC
 # pandas
 
 TBC
+
+# 文件操作
+
+
+首先假定有一个文件data.txt，内容如下所示：
+
+![zen](http://img.blog.csdn.net/20160225212434868)
+
+``` 
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+```
+
+## 一次性读取全部内容
+
+```python
+# -*- coding: UTF-8 -*-
+
+filepath='data.txt'
+
+with open(filepath, 'r') as f:
+    print f.read()
+```
+
+效果如下所示：
+
+![readfileall](http://img.blog.csdn.net/20160225213017494)
+
+## 读取固定字节大小
+
+```python
+# -*- coding: UTF-8 -*-
+
+filepath='data.txt'
+
+f = open(filepath, 'r')
+content=""
+try:
+    while True:
+        chunk = f.read(8)
+        if not chunk:
+            break
+        content+=chunk
+finally:
+    f.close()
+    print content
+```
+
 
 # 更多信息
 Hi，XDJM们，更多信息欢迎移步[我的github](https://github.com/shaoguangleo)或微信公众号letsProgramming.
