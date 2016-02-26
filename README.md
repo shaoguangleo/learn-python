@@ -1,5 +1,5 @@
 # 我们编程吧 之 python 学习手册
-**Version 0.71**
+**Version 0.72**
 
 [TOC]
 
@@ -583,6 +583,74 @@ filepath = 'data1.txt'
 with open(filepath,'w') as f:
     f.write('Hello World')
 ```
+
+# 网络
+
+## 服务器socket
+```python
+# -*- coding: UTF-8 -*-
+
+from socket import *
+from time import ctime
+
+HOST = ''
+PORT = 12345
+BUFSIZE = 1024
+ADDR = (HOST, PORT)
+
+tcp_server_fd = socket(AF_INET, SOCK_STREAM)
+tcp_server_fd.bind(ADDR)
+tcp_server_fd.listen(5)
+
+while True:
+    print 'Waiting for connection ...'
+    tcp_client_fd, addr = tcp_server_fd.accept()
+    print '>Connected from:', addr
+
+    while True:
+        try:
+            data = tcp_client_fd.recv(BUFSIZE)
+            print '<',data
+            tcp_client_fd.send('[%s] %s'% (ctime(),data))
+        except:
+            print '#Disconnect from:',addr
+            tcp_client_fd.close()
+            break
+tcp_server_fd.close()
+```
+
+## 客户端socket
+
+```python
+# -*- coding: UTF-8 -*-
+
+from socket import *
+
+HOST = 'localhost'
+PORT = 12345
+BUFSIZE = 1024
+ADDR = (HOST, PORT)
+
+tcp_client_fd = socket(AF_INET, SOCK_STREAM)
+tcp_client_fd.connect(ADDR)
+
+try:
+    while True:
+            data = raw_input('type close to exit >')
+            if data == 'close':
+                break
+            if not data:
+                continue
+            tcp_client_fd.send(data)
+            data = tcp_client_fd.recv(BUFSIZE)
+            print data
+except:
+    tcp_client_fd.close()
+```
+
+测试效果如下所示：
+![socket-tcp](http://img.blog.csdn.net/20160226212638132)
+
 
 
 # 更多信息
