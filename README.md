@@ -1,5 +1,5 @@
 # 我们编程吧 之 python 学习手册
-**Version 0.7**
+**Version 0.71**
 
 [TOC]
 
@@ -496,7 +496,6 @@ Namespaces are one honking great idea -- let's do more of those!
 ```
 
 ## 一次性读取全部内容
-
 ```python
 # -*- coding: UTF-8 -*-
 
@@ -505,7 +504,6 @@ filepath='data.txt'
 with open(filepath, 'r') as f:
     print f.read()
 ```
-
 效果如下所示：
 
 ![readfileall](http://img.blog.csdn.net/20160225213017494)
@@ -529,6 +527,62 @@ finally:
     f.close()
     print content
 ```
+效果如下所示：
+![read-bytes](http://img.blog.csdn.net/20160226200624110)
+
+## 每次读取一行
+
+```python
+# -*- coding: UTF-8 -*-
+
+filepath='data.txt'
+
+f = open(filepath, 'r')
+content = ''
+
+try:
+	while True:
+		line = f.readline()
+		print '>>>'
+		print line
+		if not line:
+			break
+		content += line
+finally:
+	f.close()
+```
+效果如下所示：
+![read-line](http://img.blog.csdn.net/20160226201351427)
+
+## 一次读取所有行
+
+```python
+# -*- coding: UTF-8 -*-
+
+filepath='data.txt'
+
+f = open(filepath, 'r')
+content = ''
+
+with open(filepath,'r') as f:
+    content = f.readlines()
+
+for i in content:
+    print '>' + i,
+```
+
+效果如下所示：
+![read-lines](http://img.blog.csdn.net/20160226205650647)
+
+## 写文件
+```python
+# -*- coding: UTF-8 -*-
+
+filepath = 'data1.txt'
+
+with open(filepath,'w') as f:
+    f.write('Hello World')
+```
 
 
 # 更多信息
@@ -538,3 +592,4 @@ Hi，XDJM们，更多信息欢迎移步[我的github](https://github.com/shaogua
 
 
 [numpy]: http://www.numpy.org
+
