@@ -32,6 +32,8 @@ print 'Hello World'
 
 也可以使用另一种执行程序的方法，我们在程序中再加上一行`#!/usr/bin/env python`，这句话的意思是告诉系统该程序将使用python来解析，完整程序为：
 ```python
+#!/usr/bin/env python
+
 print 'Hello World'
 ```
 保存为hello_v2.py，并将该文件使用**chmod +x hello_v2.py**增加可执行权限，然后在终端里面输入`./hello_v2.py`即可执行了，效果图如下所示：
