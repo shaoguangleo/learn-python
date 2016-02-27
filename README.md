@@ -1,5 +1,5 @@
 # 我们编程吧 之 python 学习手册
-**Version 0.72**
+**Version 0.73**
 
 [TOC]
 
@@ -12,6 +12,37 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 ```
+# 数据类型和数据结构
+
+## 执行python代码
+在正儿八经地探索Python之前，我们需要知道如何执行我们编写的Python代码。
+首先写一个基本所有程序员都会接触到的第一个程序吧，新建一个文件，比如为**hello.py**，用你喜欢的文本编辑器打开，Windows上用记事本或者Notepad，Linux上可以用Vim或者Emacs，MacOSX上可以用xcode或者Vim打开。
+添加如下内容：
+```python
+print 'Hello World'
+```
+
+- Windows 上可以直接进入该文件所在的目录，在将Python加入到PATH环境变量后，Windows可以直接识别后缀为**py**的文件，输入`hello.py`直接可以执行
+- Linux各个发行版中，使用`$ python hello.py`
+- MacOSX 上，也是使用`% python hello.py`
+
+比如在Ubuntu上的测试效果如下所示：
+
+![helloworld](http://img.blog.csdn.net/20160227223002914)
+
+也可以使用另一种执行程序的方法，我们在程序中再加上一行`#!/usr/bin/env python`，这句话的意思是告诉系统该程序将使用python来解析，完整程序为：
+```python
+print 'Hello World'
+```
+保存为hello_v2.py，并将该文件使用**chmod +x hello_v2.py**增加可执行权限，然后在终端里面输入`./hello_v2.py`即可执行了，效果图如下所示：
+
+![helloworldv2](http://img.blog.csdn.net/20160227224117365)
+
+## 变量和对象
+
+对于像C、C++和Java这样的语言，在使用变量之前必须先定义变量，并制定变量的类型，Python也像他们一样，使用前需要先定义变量，**但是**python不需要指定变量的类型，如下所示：
+
+![variable](http://img.blog.csdn.net/20160227225418271)
 
 # Python IDE
 
@@ -660,4 +691,3 @@ Hi，XDJM们，更多信息欢迎移步[我的github](https://github.com/shaogua
 
 
 [numpy]: http://www.numpy.org
-
