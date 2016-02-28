@@ -63,6 +63,27 @@ while with
 yield
 ```
 
+更多信息参考[Python官网][python]。
+
+## 集合类型
+Python内建的集合类型有下列几种：
+- Tuple
+- List
+- Dictionary
+- Set
+其中Tuple类型是不能改变值的。
+
+```python
+a = (1,)       		# Tuple
+b = [1,2,3]    		# List
+c = {'Age':30} 		# Dictonary
+d = set(('Apple'))	# Set
+```
+### Tuple
+### List
+### Dictionary
+## Set
+
 # Python IDE
 
 
@@ -710,3 +731,5 @@ Hi，XDJM们，更多信息欢迎移步[我的github](https://github.com/shaogua
 
 
 [numpy]: http://www.numpy.org
+[python]:http://www.python.org/
+[pyqt]:http://www.riverbankcomputing.co.uk/
