@@ -32,8 +32,6 @@ print 'Hello World'
 
 也可以使用另一种执行程序的方法，我们在程序中再加上一行`#!/usr/bin/env python`，这句话的意思是告诉系统该程序将使用python来解析，完整程序为：
 ```python
-#!/usr/bin/env python
-
 print 'Hello World'
 ```
 保存为hello_v2.py，并将该文件使用**chmod +x hello_v2.py**增加可执行权限，然后在终端里面输入`./hello_v2.py`即可执行了，效果图如下所示：
@@ -45,6 +43,25 @@ print 'Hello World'
 对于像C、C++和Java这样的语言，在使用变量之前必须先定义变量，并制定变量的类型，Python也像他们一样，使用前需要先定义变量，**但是**python不需要指定变量的类型，如下所示：
 
 ![variable](http://img.blog.csdn.net/20160227225418271)
+
+## Python关键字
+```python
+and as assert break 
+class continue
+def del
+elif else except exec
+finally for from
+global
+if import in is 
+lambda
+not 
+or
+pass print
+raise return
+try 
+while with
+yield
+```
 
 # Python IDE
 
