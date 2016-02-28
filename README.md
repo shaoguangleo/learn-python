@@ -1,5 +1,5 @@
 # 我们编程吧 之 python 学习手册
-**Version 0.73**
+**Version 0.74**
 
 [TOC]
 
@@ -81,8 +81,88 @@ d = set(('Apple'))	# Set
 ```
 ### Tuple
 ### List
+列表推导
+```python
+x = [i for i in range(50) if i % 5 == 0]
+```
 ### Dictionary
-## Set
+### Set
+
+## 函数
+函数的语法如下所示：
+
+```
+def funtion_name(optional parameters):
+	suite
+```
+例如：
+```python
+def greeting():
+	print 'Welcome to Python...'
+```
+比如这里我们写一个类似range的函数：
+```python
+def f_range(arg0,arg1=None,arg2=None):
+	'''Returns a list of floats using range-like syntax
+	f_range(start,stop,inc)   # start = arg0,stop = arg1, inc = arg2
+	f_range(start, stop)      # start = arg0,stop = arg1,inc = 1.0
+	f_range(stop)             # start = 0.0, stop = arg0,inc =1.0
+	'''
+	start = 0.0
+	inc = 1.0
+	if arg2 is not None:
+		start = arg0
+		stop = arg1
+		inc = arg2
+	elif arg1 is not None:
+		start = arg0
+		stop = arg1
+	else:
+		stop = arg0
+	
+	# Build and return a list
+	rst = []
+	while start < (stop - (inc/2.0)):
+		rst.append(start)
+		start += inc
+	return rst
+```
+### lambda 表达式
+lambda的函数体比def简单很多，lambda的主体是一个表达式，而不是一个代码块。仅仅能在lambda表达式中封装有限的逻辑进去。
+lambda表达式是起到一个函数速写的作用。允许在代码内嵌入一个函数的定义。比如下例：
+```python
+f = lambda x,y,z : x + y +z
+```
+或者：
+```python
+def test(x):
+	return lambda y:x+y
+```
+
+## 异常处理
+
+![exception](http://img.blog.csdn.net/20160228204111556)
+
+正常处理：
+```python
+result = ''
+i = text.find('<')
+if i > -1:
+	j = text.find('>',i+1)
+	if j > -1:
+		result = text[i:j+1]
+	print result
+```
+异常处理：
+```python
+try:
+	i = text.index('<')
+	j = text.index('>',i+1)
+	result = text[i:j+1]
+except ValueError:
+	result = ''
+print result
+```
 
 # Python IDE
 
