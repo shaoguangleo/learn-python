@@ -1,5 +1,5 @@
 # 我们编程吧 之 python 学习手册
-**Version 0.74**
+**Version 0.75**
 
 [TOC]
 
@@ -163,6 +163,16 @@ except ValueError:
 	result = ''
 print result
 ```
+## None类型
+None类型代表一个空对象，在Python环境中，只有一个None对象，所有对None对象的引用都使用同一个实例，这意味着与None的对象值相等测试通常会被对象身份测试代替，如下所示：
+```python
+aVariable is None
+```
+而不是
+```python
+aVariable == None
+```
+
 
 # Python IDE
 
