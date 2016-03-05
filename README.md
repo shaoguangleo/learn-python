@@ -46,19 +46,19 @@ print 'Hello World'
 
 ## Python关键字
 ```python
-and as assert break 
+and as assert break
 class continue
 def del
 elif else except exec
 finally for from
 global
-if import in is 
+if import in is
 lambda
-not 
+not
 or
 pass print
 raise return
-try 
+try
 while with
 yield
 ```
@@ -119,7 +119,7 @@ def f_range(arg0,arg1=None,arg2=None):
 		stop = arg1
 	else:
 		stop = arg0
-	
+
 	# Build and return a list
 	rst = []
 	while start < (stop - (inc/2.0)):
@@ -632,7 +632,7 @@ TBC
 
 ![zen](http://img.blog.csdn.net/20160225212434868)
 
-``` 
+```
 The Zen of Python, by Tim Peters
 
 Beautiful is better than ugly.
@@ -815,7 +815,7 @@ except:
 
 
 # 更多信息
-Hi，XDJM们，更多信息欢迎移步[我的github](https://github.com/shaoguangleo)或微信公众号letsProgramming.
+Hi，XDJM们，更多信息欢迎移步[我的github](https://github.com/shaoguangleo)、[CSDN](http://blog.csdn.net/shaoguangleo)或微信公众号letsProgramming.
 
 ![letsProgramming](http://img.blog.csdn.net/20160128231400788)
 
